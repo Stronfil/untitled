@@ -1,81 +1,80 @@
-public class Main {
-
-    public static void main(String[] args) {
-        System.out.println("задание 2");
-        byte c = 127;
-        c++;
-        System.out.println(c);
-        short b = 30200;
-        b--;
-        System.out.println(b);
-        int a = 300000000;
-        long d = 303030030303011999L;
-        float e = 112.1231123f;
-        double f = 1111111.111111111;
-        System.out.println(a);
-        System.out.println(d);
-        System.out.println(e);
-        System.out.println(f);
-        char g = 7777;
-        System.out.println(g);
-        boolean h = true;
 
 
-        System.out.print("Задание 3 : ");
-        System.out.println(task3(4, 4, 4, 4));
-        System.out.print("Задание 4 : ");
-        System.out.println(task4(10,5));
-        System.out.print("Задание 5 : ");
-        isPositiveOrNegative(8);
-        System.out.print("Задание 6 : ");
-        System.out.println(isNegative(-5));
-        System.out.print("Задание 7 : ");
-        hello("Вася");
+import java.sql.SQLOutput;
+import java.util.Arrays;
+
+    public class Main {
+
+        public static void main(String[] args) {
+            //Задание3     //checkArr();
+            //здаание4  //fillDiagonal();
 
 
+//Задание1
+    /*int[] quest = {1, 0, 1, 1, 0};
 
+        for (int i = 0; i < quest.length; i++) {
+            if (quest[i]==0){
+                quest[i]=1;
+            }else {
+                quest[i]=0;
 
+            }
 
+         System.out.println(quest[i] );
 
-    }
-
-    public static float task3(float a,  float b,  float c,  float d) {
-
-        return  a * (b + (c / d));
-    }
-
-
-    public static boolean task4(int a,int b){
-        return  a + b < 20 && a + b > 10;
-
-
-
-
-    }
-    public static void isPositiveOrNegative(int a) {
-
-        if (a >= 0) {
-            System.out.println(a + " положительное");
-        } else {
-            System.out.println(a + " отрицательное");
         }
 
 
+    //Задание2
+            int[] two = new int[8];
+
+            for (int i = 0, j = 0; i < two.length; i++, j += 3) {
+
+                two[i] = j;
+                System.out.println(two[i] );*/
+
+
+
+
+
+        }
+
+        //Задание3
+        public static void checkArr() {
+            int[] are = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+            for (int i = 0; i < are.length; i++) {
+                if (are[i] < 6) {
+                    are[i] *= 2;
+                }
+
+
+                System.out.println(are[i]);
+
+
+            }
+        }
+        //здаание4
+        public static void fillDiagonal() {
+            int[][] arr = new int[4][4];
+            for (int i = 0; i < arr.length; i++) {
+                for (int j = 0; j < arr[i].length; j++) {
+                    if (i == j || i + j == 4 - 1) {
+                        arr[i][j] = 1;
+                    }
+
+                    System.out.print(arr[i][j] + " ");
+                }
+                System.out.println(Arrays.toString(arr));
+            }
+        }
 
     }
 
 
-    public static boolean isNegative(int x) {
-        if (x < 0){
-            return true;}
-        return false;
-    }
-
-    public static void hello(String name) {
-        System.out.println("Привет , "+ name + '!');
 
 
-    }
 
 
-}
+
+
