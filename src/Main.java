@@ -1,15 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        Actions[]actions={new Cat(),new Robot(),new Human()};
-        Obstacles[]obstacles={new Wall(2),new Treadmill(40)};
-        for (Actions action : actions) {
-            for (Obstacles obstacle : obstacles) {
-                obstacle.trials(action);
 
-            }
+        int result = 0;
 
-        }
-
-
+        String[][] array = {{"1", "1", "1", "1"}, {"1", "1", "1", "1"}};
+        String[][] error_array = {{"1", "2", "3", "4", "1"}, {"1", "2", "3", "4"}};
+        String[][] error_data = {{"1", "1", "3", "4",}, {"1", "2", "аа3", "4"}};
     }
 }
